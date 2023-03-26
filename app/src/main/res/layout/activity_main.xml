@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="ПРИЛОЖЕНИЕ ПЛЕЕР"
+        android:textColor="#1E6340"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textOut"
+        android:layout_width="380dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="15dp"
+        android:background="#FBC4B3"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:hint="Название мелодии"
+        android:textColor="#1E6340"
+        android:textColorHint="#1E6340"
+        android:textSize="19sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="380dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOut">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnResume"
+                    android:layout_width="185dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="#1E6340"
+                    android:fontFamily="serif"
+                    android:onClick="onClick"
+                    android:text="ВОСПРОИЗВЕСТИ"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <Button
+                android:id="@+id/btnPause"
+                android:layout_width="185dp"
+                android:layout_height="70dp"
+                android:backgroundTint="#1E6340"
+                android:fontFamily="serif"
+                android:onClick="onClick"
+                android:text="ПАУЗА"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnBackward"
+                    android:layout_width="185dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="#1E6340"
+                    android:fontFamily="serif"
+                    android:onClick="onClick"
+                    android:text="НАЗАД"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <Button
+                android:id="@+id/btnForward"
+                android:layout_width="185dp"
+                android:layout_height="70dp"
+                android:backgroundTint="#1E6340"
+                android:fontFamily="serif"
+                android:onClick="onClick"
+                android:text="ВПЕРЁД"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="185dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="#1E6340"
+                android:fontFamily="serif"
+                android:onClick="onClick"
+                android:text="СТОП"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Switch
+                    android:id="@+id/switchLoop"
+                    android:layout_width="185dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#1E6340"
+                    android:fontFamily="serif"
+                    android:text="ПОВТОР"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+            </TableRow>
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="ИСТОЧНИК"
+        android:textColor="#8D422B"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnStream"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#FBC4B3"
+            android:fontFamily="serif"
+            android:onClick="onClickSource"
+            android:text="Интернет"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnRAW"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FBC4B3"
+            android:fontFamily="serif"
+            android:onClick="onClickSource"
+            android:text="Телефон"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
